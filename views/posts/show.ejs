@@ -1,0 +1,30 @@
+<% include ../partials/header.ejs %>
+
+<div class="header header--home">
+	<div class="header__title"><%= post.title %></div>
+</div>
+
+<div class="content">
+	<!-- POST -->
+	<div class="post post--show">
+		<div class="post__title"><%= post.title %></div>
+		<div class="post__content"><%= post.content %></div>
+
+		<a class="btn btn--blue" href="<%= post._id %>/edit">Edit</a>
+		<form action="/blogs/<%= post._id %>?_method=DELETE" method="POST" style="display: inline">
+			<button class="btn btn--red">Delete</button>
+		</form>
+
+		<div class="comments">
+			<div class="comments__title">COMMENTS</div>
+			<% post.comments.forEach(function(comment) {%>
+				<div class="comments__author"><%= comment.author.username %></div>
+				<div class="comments__text"><%= comment.text %></div>
+			<% })%>
+		</div>
+
+		<a class="btn btn--green" href="/blogs/<%= post._id %>/comments/new">Create Comment</a>
+	</div>
+</div>
+
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,20 @@
+<% include ../partials/header.ejs %>
+
+<div class="header header--home">
+	<div class="header__title">Create Comments</div>
+</div>
+
+
+<div class="content">
+	<form class="form" action="/blogs/<%= post._id %>/comments" method="POST">
+		<div class="form__title">Create Comment to <%= post.title %>!</div>
+		<div class="form__field">
+			<div class="form__label"><strong>Text</strong></div>
+			<textarea class="form__textarea" name="comment[text]" placeholder="Text"></textarea>
+		</div>
+
+		<input class="btn btn--blue" type="submit">
+	</form>
+</div>
+
+<% include ../partials/footer.ejs %>

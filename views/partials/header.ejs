@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body class="page">
+	<div class="nav">
+		<div class="nav__logo"></div>
+		<a href="/blogs" class="nav__item">Home</a>
+		<a href="/blogs/new" class="nav__item">Post</a>
+
+		<% if(!currentUser ){ %>
+			<a href="/login" class="nav__item nav__item--right">Log In</a>
+			<a href="/register" class="nav__item">Sign Up</a>
+		<% } else { %>
+			<a href="/logout" class="nav__item nav__item--right">Log Out</a>
+			<a class="user-circle"><%= currentUser.username.charAt(0).toUpperCase() %></a>
+		<% } %>
+	</div>

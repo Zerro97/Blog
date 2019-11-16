@@ -1,0 +1,24 @@
+<% include ../partials/header.ejs %>
+
+<!-- Header -->
+<div class="header header--home">
+	<div class="header__title">THE BLOG</div>
+	<a class="btn btn--blue" href="blogs/new">Create Post</a>
+</div>
+
+<!-- Content -->
+<div class="content">
+	<% posts.forEach(function(post) { %>
+		<div class="post post--home">
+			<div class="post__title"><%= post.title %></div>
+			<div class="post__content"><%= post.content %></div>
+			<a class="btn btn--green" href="/blogs/<%= post._id %>">Read More</a>
+		</div>	
+	<% }) %>
+
+	<div class="content__text">
+
+	</div>
+</div>
+
+<% include ../partials/footer.ejs %>

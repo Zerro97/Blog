@@ -1,0 +1,25 @@
+<% include ../partials/header.ejs %>
+
+<div class="header header--home">
+	<div class="header__title">Edit Post</div>
+</div>
+
+
+<div class="content">
+	<form class="form" action="/blogs/<%= post._id %>?_method=PUT" method="POST">
+		<div class="form__title">Update Post!</div>
+		<div class="form__field">
+			<div class="form__label"><strong>Title</strong></div>
+			<input class="form__text" type="text" name="blog[title]" value="<%= post.title %>">
+		</div>
+		<div class="form__field">
+			<div class="form__label"><strong>Blog Content</strong></div>
+			<textarea class="form__textarea" name="blog[content]"><%= post.content %></textarea>
+		</div>
+		
+		<input class="btn btn--blue" type="submit">
+	</form>
+</div>
+
+
+<% include ../partials/footer.ejs %>
