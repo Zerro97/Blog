@@ -6,24 +6,26 @@ var Post = require("../models/post");
 // Post route
 // ==============
 
-router.get("/", function(req, res) {
+router.get("/", isLoggedIn, function(req, res) {
+	console.log(Post.find());
 	Post.find({}, function(err, posts){
 		if(err) {
 			console.log(err);
 			console.log("Error in comment default route");
 		} else {
+
 			res.render("posts/index", {posts: posts});
 		}
 	})
 });
 
 // NEW route
-router.get("/new", isLoggedIn, function(req, res) {
+router.get("/new", function(req, res) {
 	res.render("posts/new");
 });
 
 // CREATE route
-router.post("/", isLoggedIn, function(req, res) {
+router.post("/", function(req, res) {
 	//var name = req.body.name;
 	//var desc = req.body.
 

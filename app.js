@@ -18,9 +18,7 @@ var postsRoutes = require("./route/posts.js");
 // ================
 // SET UP
 // ================
-//mongoose.connect("mongodb://localhost/blog");
-
-
+mongoose.connect("mongodb://localhost/blog");
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
