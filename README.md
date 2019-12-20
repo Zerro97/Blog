@@ -31,3 +31,19 @@ On one of the console run the above command. This will start the mongodb local d
 ### Third Step
 #### `npm start`
 On the other console run the above command. This will start the server at localhost:3000
+
+## Screen Shots
+#### Home Page
+<img src="https://github.com/Zerro97/Blog/blob/master/screenshots/home.png" alt="Home Page" height="350px" width="500px"/>
+
+#### Post Page
+<img src="https://github.com/Zerro97/Blog/blob/master/screenshots/post.png" alt="Post Page" height="350px" width="500px"/>
+
+#### Post Create Page
+<img src="https://github.com/Zerro97/Blog/blob/master/screenshots/create_post.png" alt="Post Create Page" height="350px" width="500px"/>
+
+#### Log In Page
+<img src="https://github.com/Zerro97/Blog/blob/master/screenshots/login.png" alt="Log In Page" height="350px" width="500px"/>
+
+#### Sign Up Page
+<img src="https://github.com/Zerro97/Blog/blob/master/screenshots/signup.png" alt="Sign Up Page" height="350px" width="500px"/>
