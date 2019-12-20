@@ -1,5 +1,5 @@
 # Description
-This application is built using MongoDB, Express and Node.js.
+This application was built using MongoDB, Express and Node.js.
 
 ## Set Up
 Before running this application, you need to set up and download necessary frameworks to view the 
